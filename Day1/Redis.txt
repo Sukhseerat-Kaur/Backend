@@ -1,0 +1,60 @@
+💣 REDIS 💣:
+    Redis stands for REmote DIctionary Server.
+    Redis is an open source, in-memory key-value store where keys can contain data structures such as strings,
+    hashes, lists, sets, and sorted sets. Redis Can be used as Database, a Caching layer or a Message broker.
+
+
+Setup 💻: 
+    > sudo apt-get update
+    > sudo apt-get upgrade
+    > sudo apt-get install redis-server
+    > sudo service redis-server restart
+    > redis-cli
+
+
+🚀 Basic Commands:
+
+    - SET key value : set the string value of a key
+    - GET key  : get the value of key
+    - ttl key : Get the time to live for a key in seconds
+    - KEYS *  : Returns list of all keys available
+    - DEL key  : To delete a key
+    - FLUSHALL  : Remove all keys from all databases
+    - FLUSHDB : Remove all keys from the current database
+    - EXISTS key  : to determine if a key exists
+    - expire key time  :  set a key's time to live in seconds
+    - setex key time value : set the value and expiration time in seconds of a key
+
+
+🚀 For Arrays as a value to a key:
+
+    - LPUSH array value  : prepend one or multiple elements to a list
+    - RPUSH array value  : append one or multiple elements to a list
+    - LRANGE array start stop : get a range of elements from a list
+    - LPOP array : remove and get the first elements in a list
+    - RPOP array : remove and get the last elements in a list
+
+
+🚀 For Sets as a value to a key: (no duplicates allowed)
+
+    - SADD setname value : add one more members to a set
+    - SMEMBERS setname : get all members in a set
+
+
+🚀 For Object/Hash as a value to a key:
+    
+    - HSET key field value  : set the string value of a hash field
+    - HGET key field  : get the value of a hash field
+    - HGETALL key  : get all the fields and values in a hash
+    - HDEL key field  : delete one or more hash fields
+    - HEXISTS key field : determine if a hash field exists
+
+
+
+💣 Postgres SQL 💣: 
+
+Setup 💻 :
+
+    Follow https://kontext.tech/column/sql-databases/616/install-postgresql-on-wsl to setup postgres on wsl
+    To start postgres server - sudo service postgresql start
+    enter postgres prompt - sudo -u postgres psql

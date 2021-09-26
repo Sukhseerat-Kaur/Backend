@@ -9,7 +9,7 @@ router.get("/", function (req, res, next) {
 });
 
 /**
- * @requires {firstName, email, password, confirmPassword} from req.body
+ * {firstName, email, password, confirmPassword} from req.body
  *
  * LEVEL1: Performed by the "checksBeforeRegister" middleware
  * email validation
@@ -26,7 +26,7 @@ router.get("/", function (req, res, next) {
  * and save the new user into the database
  *
  * This level3 is our actual logic, which deals with connectivity eith the database too. So whenever we write the actual logic, we make that file in the controllers folder
- *We will be using Sequelize for connecting with the database (in app.js)
+ * We will be using Sequelize for connecting with the database. Sequelize is an ORM
  *
  * We will be making different middlewares for these subtasks, so that if at one middleware only, the checks fail, then it doesnt go to the next steps, haults there only.
  */
